@@ -1,0 +1,21 @@
+<h1>Viewer</h1>
+
+
+<table>
+    <tr>
+       <th>Object</th>
+       <th>Body</th>
+       <th></th>
+    </tr>
+
+  <% @emails.each do |x| %>
+    <tr>
+       <td><%=x.object%></td>
+       <td><%=x.body%></td>
+       <td><%=link_to 'Destroy', x, method: :delete, data: {confirm: 'Are you sure ?'}, :remote => true, :class => 'delete_email' %></td>
+    </tr>
+
+    <%  end %>
+
+
+</table>
